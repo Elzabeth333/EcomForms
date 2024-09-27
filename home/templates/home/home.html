@@ -1,0 +1,45 @@
+{% extends 'home/base.html' %}
+{% block title %}
+Ecommerce | Home
+{% endblock %}
+{% block content %}
+
+<div class="row m-5">
+    <div class="col-12 text-end">
+        <a href="{% url 'add_product' %}" class="btn btn-outline-primary">Add New Product</a>
+    </div>
+</div>
+
+{% if Products %}
+<div class="row m-5">
+    {% for product in Products %}
+    <div class="col-md-4 col-sm-6 mt-4">
+        <div class="card h-100 product-card shadow-sm">
+            <img src="{{ product.product_image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}" style="height: 250px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <h5 class="card-title text-primary">{{ product.name }}</h5>
+                    <p class="card-text text-muted">{{ product.description }}</p>
+                </div>
+                <div class="mt-auto">
+                    <p class="text-success fw-bold">Rs. {{ product.price }}/-</p>
+                    <label class="btn btn-sm btn-outline-secondary">{{ product.category.name }}</label>
+                    <div class="mt-3">
+                        <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-success me-2">Edit</a>
+                        <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="row m-5 text-center">
+    <div class="col-12">
+        <div class="alert alert-warning">No products to display</div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

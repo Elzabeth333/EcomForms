@@ -1,0 +1,85 @@
+/* style.css */
+
+.navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    margin-right: 15px;
+  }
+  
+  .hero-banner {
+    background-image: url("../images/banner.jpg"); /* Adjust the path based on your file structure */
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+  
+  .navbar .btn-primary {
+    margin-left: 10px;
+  }
+  /* homestyle.css */
+
+/* Card hover effect */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Customize button styles */
+  .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  /* Card title and price styling */
+  .card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .text-success {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
